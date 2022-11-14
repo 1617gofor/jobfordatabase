@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerforcpy</title>
+    <style>
+        body{
+            background-image:url("../static/reg_bg_min.jpg");
+        }
+        form{
+            width: 350px;
+            height:350px;
+            background-color: rgb(181, 225, 225);
+            position:relative;
+            box-shadow: rgb(56, 59, 59) ;
+            margin: auto;
+            margin-top:15%;
+        }
+        .head{
+            position: absolute;
+            left: 40%;
+           
+            
+        }
+        .body{
+            position: absolute;
+            top: 25%;
+            left: 20% ;
+        }
+        .footer{
+            position: absolute;
+            bottom: 10%;
+            left: 38%;
+        }
+        .header{
+            width: 15%;  
+            margin: auto;
+        }
+        #longname{
+            position: absolute;
+            top: 45%;
+            left: 11%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>大学生就业咨询系统</h3>
+    </div>
+    <form action="">
+        <div class="head">
+            <h1>注册</h1>
+        </div>
+        <div class="body">
+            <!-- 仿输入框 -->
+            <label for="acount1">账号</label>
+            <input type="text" name="acount" id="acount1" placeholder="请输入账号"><br>
+            <label for="password">密码</label>
+            <input type="password" name="pwd" id="password" placeholder="请输入密码"><br> 
+            <label for="">邮箱</label>
+            <input type="email" name="cpyemail" id="cpyemail" placeholder="请输入邮箱"><br> 
+        </div>
+        <div id="longname">
+            <label for="">单位标号</label>
+            <input type="text" name="cpybiaohao" id="biaohao" placeholder="请输入单位标号"><br>
+            <label for="">单位名称</label>
+            <input type="text" name="cpyname" id="apyname" placeholder="请输入单位名称"><br>
+            <label for="">所在地区</label>
+            <input type="text" name="cpylocation" id="cpylocation" placeholder="请输入所在地区"><br>
+            <label for="">联系电话</label>
+            <input type="text" name="cpytel" id="cpytel" placeholder="请输入联系电话"><br>
+        </div>
+        <div class="footer">
+            <!-- 放登录/注册按钮 -->
+                <input type="submit" value="注册" name="register" >
+                <input type="submit" value="返回" name="back">
+        </div>
+    </form>
+</body>
+</html>

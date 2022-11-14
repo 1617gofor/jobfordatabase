@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerforstu</title>
+    <style>
+        body{
+            background-image:url("../static/reg_bg_min.jpg");
+        }
+        form{
+            width: 350px;
+            height: 250px;
+            background-color: rgb(181, 225, 225);
+            position:relative;
+            box-shadow: rgb(56, 59, 59) ;
+            margin: auto;
+            margin-top:15%;
+        }
+        .head{
+            position: absolute;
+            left: 40%;
+           
+            
+        }
+        .body{
+            position: absolute;
+            top: 35%;
+            left: 20% ;
+        }
+        .footer{
+            position: absolute;
+            bottom: 15%;
+            left: 38%;
+        }
+        .header{
+            width: 15%;  
+            margin: auto;
+        }
+        .input{
+            display: inline-block;
+        }
+        .input span{
+            color: red;
+            font-size: 3px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>大学生就业咨询系统</h3>
+    </div>
+    <form action="" method="post">
+        <div class="head">
+            <h1>注册</h1>
+        </div>
+        <div class="body">
+            <div class="input">
+                <label for="acount1">账号</label>
+                <input type="text" name="acount" id="acount1" placeholder="请输入10位数的账号" onblur="checkacount();">
+                <span id="acspan"></span>
+            </div><br>
+           
+            <div class="input">
+                <label for="password">密码</label>
+                <input type="password" name="pwd" id="password" placeholder="请输入20位数以下密码" onblur="checkpwd();">
+                <span id="pwdspan"></span>
+            </div><br>  
+        </div>
+        <div class="footer">
+            <!-- 放登录/注册按钮 -->
+                <input type="submit" value="注册" name="submit" >
+                <input type="submit" value="返回" name="submit">
+        </div>
+    </form>
+    <script>
+        function checkpwd(){
+            var tag=document.getElementById("password");
+            var text=tag.value;
+            var sp=document.getElementById("pwdspan");
+            if(text.length<=0||text.length>20){
+              
+                sp.innerText="格式有误";
+            }else{
+                sp.innerText="";
+            }
+            
+        }
+        function checkacount(){
+            var tag=document.getElementById("acount1");
+            var text=tag.value;
+            var sp=document.getElementById("acspan");
+            if(text.length!=10){
+              
+                sp.innerText="格式有误";
+            }
+            else{
+                sp.innerText="";
+            }
+        }
+    </script>
+</body>
+</html>
