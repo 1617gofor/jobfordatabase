@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modordetails</title>
+    <style>
+         body{
+            background-image: url("../static/reg_bg_min.jpg");
+          
+        }
+         .header{
+            position: relative;
+            height: 35px;
+          
+        }
+        .header span{
+            position: absolute;
+            left: 42%;
+            font-size: 30px;
+        }
+        .body{
+            display: inline-block;
+            width: 800px;
+            height: 650px;
+            background-color: rgba(161, 185, 185, 0.904);
+            margin-left: 25%;
+            margin-top: 3%;
+        }
+        .selectmajor span{
+            width: 40px;
+            height: 20px;
+        }
+        .selectmajor span input{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>大学生就业咨询系统</span>
+    </div>
+    <div class="body">
+        <form action="" method="post">
+            <div>
+                邮箱<input type="email" name="email" placeholder="请输入邮箱"><br>
+                联系电话<input type="text" name="tel" placeholder="请输入联系号码">
+           </div>
+           <hr>
+           <div class="selectmajor">
+                <p>
+                    <div style="font-size: 20px;">请选择专业</div>
+                    <span>
+                        <input type="checkbox" name="major" value="1" id="1"><label for="1" style="font-size: 10px;">人工智能</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="2" id="2"><label for="2" style="font-size: 10px;">体育教育</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="3" id="3"><label for="3" style="font-size: 10px;">信息管理</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="4" id="4"><label for="4" style="font-size: 10px;">工程力学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="5" id="5"><label for="5" style="font-size: 10px;">教育学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="6" id="6"><label for="6" style="font-size: 10px;">新闻传播学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="7" id="7"><label for="7" style="font-size: 10px;">法学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="8" id="8"><label for="8" style="font-size: 10px;">物理学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="9" id="9"><label for="9" style="font-size: 10px;">生物科学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="10" id="10"><label for="10" style="font-size: 10px;">社会学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="11" id="11"><label for="11" style="font-size: 10px;">经济学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="12" id="12"><label for="12" style="font-size: 10px;">网络工程</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="13" id="13"><label for="13" style="font-size: 10px;">计算机</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="14" id="14"><label for="14" style="font-size: 10px;">财政学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="15" id="15"><label for="15" style="font-size: 10px;">软件工程</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="16" id="16"><label for="16" style="font-size: 10px;">金融学</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="major" value="17" id="17"><label for="17" style="font-size: 10px;">其他</label>
+                    </span>
+                </p>
+           </div>
+           <hr>
+           <div style="font-size: 20px;">
+            描述<br>
+            <textarea style="width:99%;font-size: 20px;text-align:inherit;" rows="10" placeholder="请填写一些必要的描述">{{}}</textarea>
+           </div>
+            <div style=" bottom: 10%; position: absolute; left: 55%;display: inline-block;">
+                <input type="submit" name="ok" value="发布" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
+            </div>
+            <div style=" bottom: 10%; position: absolute; left: 45%;display: inline-block;">
+                <input type="submit" name="ok" value="返回" style="width:50px;height:50px;font-size:20px; background-color: aquamarine;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afterloginforstu</title>
+    <style>
+        body{
+            background-image: url("../static/reg_bg_min.jpg");
+          
+        }
+        .header{
+            position: relative;
+            height: 35px;
+          
+        }
+        .header span{
+            position: absolute;
+            left: 42%;
+            font-size: 30px;
+        }
+        .header a{
+            position: absolute;
+            right: 1%;
+            background-color: red;
+        }
+        
+        .hdiv{
+            display: inline-block;
+            margin-left: 18%;
+            border: 1px;
+            
+        }
+       
+        .body{
+            
+            margin-top: 8%;
+            background-color:white;
+        }
+        .footer{
+            background-color: aqua;
+            height: 30px;
+           
+           
+        }
+        .tbinfo{
+           
+            width: 65%;
+            margin: auto;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>大学生就业咨询系统</span>
+        <a href="">退出登录</a>
+    </div>
+    
+    <div class="body">
+        <div class="header2">
+            <div class="hdiv">
+               <form action="" method="post">
+                    <span>地区</span>
+                    <input type="text" name="loc" style="width:100px ;">
+                    <span>专业</span>
+                    <input type="text" name="major" style="width: 100px;">
+                    <input type="submit" name="search" value="搜索">
+               </form>
+            </div>
+        </div>
+        <table class="tbinfo" align="center" border="2px" cellspacing="0" style="text-align:center;">
+            <tr>
+                <th>单位名称</th>
+                <th>地区</th>
+                <th>招聘专业</th>
+                <th>发布时间</th>
+                <th>详细信息</th>
+            </tr>
+            <!-- {% for item in list %} -->
+            <tr>
+               
+                <td>{{}}</td>
+                <td>{{}}</td>
+                <td>{{}}</td>
+                <td>{{}}</td>
+                <td >
+                    <a href="" style="background-color: red; ">详情</a>
+                </td>
+              
+            </tr>
+            <!-- {% endfor %} -->
+        </table>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+</html>

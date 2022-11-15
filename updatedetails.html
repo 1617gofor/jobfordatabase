@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modordetails</title>
+    <style>
+         body{
+            background-image: url("../static/reg_bg_min.jpg");
+          
+        }
+         .header{
+            position: relative;
+            height: 35px;
+          
+        }
+        .header span{
+            position: absolute;
+            left: 42%;
+            font-size: 30px;
+        }
+        .body{
+            display: inline-block;
+            width: 800px;
+            height: 650px;
+            background-color: rgba(160, 198, 198, 0.611);
+            margin-left: 25%;
+            margin-top: 3%;
+   
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>大学生就业咨询系统</span>
+    </div>
+    <div class="body">
+        <form action="" method="post">
+            <div style="font-size: 20px;">
+                邮箱<input type="text" value="{{}}" style="height:30px; font-size: 20px;"><br>
+                联系电话<input type="text" value="{{}}" style="height:30px; font-size: 20px;">
+           </div>
+           <hr>
+           <div style="font-size: 30px;">
+            描述<br>
+            <textarea style="width:99%;font-size: 20px;text-align:inherit;" rows="15">{{}}</textarea>
+           </div>
+            <div style=" bottom: 10%; position: absolute; left: 55%;display: inline-block;">
+                <input type="submit" name="ok" value="确定" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
+            </div>
+            <div style=" bottom: 10%; position: absolute; left: 45%;display: inline-block;">
+                <input type="submit" name="ok" value="返回" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
