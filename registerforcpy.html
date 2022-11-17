@@ -31,7 +31,7 @@
         }
         .footer{
             position: absolute;
-            bottom: 10%;
+            bottom: 9%;
             left: 38%;
         }
         .header{
@@ -47,13 +47,16 @@
             color: red;
             font-size: 3px;
         }
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h3>大学生就业咨询系统</h3>
     </div>
-    <form action="" method="post">
+    <form action="" method="post" id="frm">
         <div class="head">
             <h1>注册</h1>
         </div>
@@ -80,8 +83,9 @@
         </div>
         <div class="footer">
             <!-- 放登录/注册按钮 -->
-                <input type="submit" value="注册" name="submit" >
-                <input type="submit" value="返回" name="submit">
+                <h4 class="hide" id="reg" style="color:rgb(21, 200, 21);">注册成功！！</h4>
+                <input type="button" value="注册" name="submit0" onclick="f();">
+                <input type="submit" value="返回" name="submit0">
         </div>
     </form>
     <script>
@@ -94,21 +98,27 @@
                 sp.innerText="格式有误";
             }else{
                 sp.innerText="";
-            }
-            
+            }    
         }
         function checkacount(){
             var tag=document.getElementById("acount1");
             var text=tag.value;
             var sp=document.getElementById("acspan");
-            if(text.length!=10){
-              
+            if(text.length!=10){    
                 sp.innerText="格式有误";
             }
             else{
                 sp.innerText="";
             }
         }
+       function f(){
+        var tag=document.getElementById("reg");
+        tag.classList.remove("hide");
+        setTimeout(function(){
+            var form=document.getElementById("frm");
+            form.submit();
+        },1500)
+       }
     </script>
 </body>
 </html>

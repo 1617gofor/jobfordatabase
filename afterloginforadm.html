@@ -50,7 +50,7 @@
         <a href="">退出登录</a>
     </div>
     <div class="body">
-        <table class="tbinfo" align="center" border="2px" cellspacing="0">
+        <table class="tbinfo" align="center" border="2px" cellspacing="0" style="text-align:center;">
             <tr>
                 <th>账号</th>
                 <th>密码</th>
@@ -63,8 +63,8 @@
                 <td>{{}}</td>
                 <td>{{}}</td>
                 <td>{{}}</td>
-                <td style="position:relative;">
-                    <a href="" style="background-color: red;">删除</a>
+                <td >
+                    <a href="" style="background-color: red;" onclick="return f();">删除</a>
                 </td>
               
             </tr>
@@ -74,5 +74,17 @@
     <div class="footer">
 
     </div>
+    <script>
+        function f(){
+            var tag=document.getElementById("delinf");
+            if(window.confirm("确定要删除吗?")){
+                tag.innerText="删除成功!";
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
+    </script>
 </body>
 </html>

@@ -26,18 +26,21 @@
         }
         .body{
             position: absolute;
-            top: 35%;
+            top: 30%;
             left: 20%;
         }
         .select_type{
             position: absolute;
-            bottom: 30%;
+            bottom: 40%;
             left: 15%;
         }
         .footer{
             position: absolute;
-            bottom: 10%;
+            bottom: 8%;
             left: 38%;
+        }
+        .footer h6{
+            color: red;
         }
         .header{
             width: 20%;  
@@ -51,6 +54,7 @@
             font-size: 3px;
             
         }
+      
     </style>
 </head>
 <body>
@@ -65,26 +69,27 @@
             <!-- 仿输入框 -->
             <div class="input">
                 <label for="acount1">账号</label>
-                <input type="text" name="acount" id="acount1" placeholder="请输入10位数的账号" onblur="checkacount();">
+                <input type="text" name="acount" id="acount1" placeholder="请输入10位数的账号" onblur="checkacount();" onfocus="f();">
                 <span id="acspan"></span>
             </div><br>
            
             <div class="input">
                 <label for="password">密码</label>
-                <input type="password" name="pwd" id="password" placeholder="请输入20位数以下密码" onblur="checkpwd();">
+                <input type="password" name="pwd" id="password" placeholder="请输入20位数以下密码" onblur="checkpwd();" onfocus="f();">
                 <span id="pwdspan"></span>
             </div><br>  
         </div>
         <div class="select_type">
             <!-- 选择框 -->
-            <input type="radio" name="type" value="1">管理员
+            <input type="radio" name="type" value="1" id="adm">管理员
             <input type="radio" name="type" value="2">用人单位
             <input type="radio" name="type" value="3">大学生
         </div>
         <div class="footer">
+            <h6 id="error">{{}}</h6>
             <!-- 放登录/注册按钮 -->
-                <input type="submit" value="登录" name="submit" ondblclick="return checktype();">
-                <input type="submit" value="注册" name="submit">
+                <input type="submit" value="登录" name="submit1">
+                <input type="button" value="注册" name="submit1" onclick="f1();">
         </div>
     </form>
     <script>
@@ -110,6 +115,24 @@
             }
             else{
                 sp.innerText="";
+            }
+        }
+        function f(){
+            var tag=document.getElementById("error");
+            tag.innerText="";
+
+        }
+        function f1(){
+            var tag=document.getElementById("error");
+            var tag1=document.getElementById("adm");
+            var form=document.getElementById("loginform");
+            if(tag1.checked==true){
+                tag.innerText="管理员不可注册";
+                setTimeout(function(){
+                    tag.innerText="";
+                },1500)
+            }else{
+                form.submit();
             }
         }
     </script>

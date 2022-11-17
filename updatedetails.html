@@ -7,7 +7,7 @@
     <title>modordetails</title>
     <style>
          body{
-            background-image: url("../static/reg_bg_min.jpg");
+            background-image: url("reg_bg_min.jpg");
           
         }
          .header{
@@ -29,6 +29,18 @@
             margin-top: 3%;
    
         }
+        .fk{
+            position: relative;
+        }
+        .fk span{
+            position: absolute;
+            left: 45%;
+            font-size: 20px;
+            color: rgb(21, 234, 95);
+        }
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +48,7 @@
         <span>大学生就业咨询系统</span>
     </div>
     <div class="body">
-        <form action="" method="post">
+        <form action="" method="post" id="frm">
             <div style="font-size: 20px;">
                 邮箱<input type="text" value="{{}}" style="height:30px; font-size: 20px;"><br>
                 联系电话<input type="text" value="{{}}" style="height:30px; font-size: 20px;">
@@ -46,13 +58,27 @@
             描述<br>
             <textarea style="width:99%;font-size: 20px;text-align:inherit;" rows="15">{{}}</textarea>
            </div>
+            <div style="height:50px ;background-color: rgba(28, 92, 240, 0.5);" class="fk">
+                <span class="hide" id="forpublish">修改成功！</span>
+            </div>
             <div style=" bottom: 10%; position: absolute; left: 55%;display: inline-block;">
-                <input type="submit" name="ok" value="确定" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
+                <input onclick="f();"  type="button" name="ok" value="确定" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
             </div>
             <div style=" bottom: 10%; position: absolute; left: 45%;display: inline-block;">
                 <input type="submit" name="ok" value="返回" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
             </div>
         </form>
     </div>
+    <script>
+        function f(){
+            var tag=document.getElementById("forpublish");
+            tag.classList.remove("hide");
+            setTimeout(function(){
+                var form=document.getElementById("frm");
+                form.submit();
+            },2000);
+            
+        }
+    </script>
 </body>
 </html>

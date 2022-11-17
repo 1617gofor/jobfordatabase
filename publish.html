@@ -35,6 +35,18 @@
         .selectmajor span input{
             vertical-align: middle;
         }
+        .fk{
+            position: relative;
+        }
+        .fk span{
+            position: absolute;
+            left: 45%;
+            font-size: 20px;
+            color: rgb(21, 234, 95);
+        }
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -42,11 +54,10 @@
         <span>大学生就业咨询系统</span>
     </div>
     <div class="body">
-        <form action="" method="post">
-            <div>
-                邮箱<input type="email" name="email" placeholder="请输入邮箱"><br>
-                联系电话<input type="text" name="tel" placeholder="请输入联系号码">
-           </div>
+        <form action="" method="post" id="frm">
+            <div style="height:60px ;background-color: rgba(28, 92, 240, 0.5);" class="fk">
+                <span class="hide" id="forpublish">发布成功！</span>
+            </div>
            <hr>
            <div class="selectmajor">
                 <p>
@@ -110,12 +121,24 @@
             <textarea style="width:99%;font-size: 20px;text-align:inherit;" rows="10" placeholder="请填写一些必要的描述">{{}}</textarea>
            </div>
             <div style=" bottom: 10%; position: absolute; left: 55%;display: inline-block;">
-                <input type="submit" name="ok" value="发布" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
+                <input onclick="f();" type="button" name="ok" value="发布" style="width:50px;height:50px;font-size:20px;background-color: aquamarine;">
             </div>
             <div style=" bottom: 10%; position: absolute; left: 45%;display: inline-block;">
                 <input type="submit" name="ok" value="返回" style="width:50px;height:50px;font-size:20px; background-color: aquamarine;">
             </div>
+            <div style="height:60px ;background-color: rgba(28, 92, 240, 0.5);"></div>
         </form>
     </div>
+    <script>
+        function f(){
+            var tag=document.getElementById("forpublish");
+            tag.classList.remove("hide");
+            setTimeout(function(){
+                var form=document.getElementById("frm");
+                form.submit();
+            },1500);
+            
+        }
+    </script>
 </body>
 </html>

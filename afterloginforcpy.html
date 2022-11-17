@@ -58,7 +58,6 @@
         <span>大学生就业咨询系统</span>
         <a href="">退出登录</a>
     </div>
-    
     <div class="body">
         <div class="header2">
             <div class="hdiv">
@@ -79,22 +78,33 @@
                 <th>发布时间</th>
                 <th>操作</th>
             </tr>
-            <!-- {% for item in list %} -->
+            {% for item in list %}
             <tr>
                
                 <td>{{}}</td>
                 <td>{{}}</td>
                 <td >
                     <a href="" style="background-color: red; ">修改/详情</a>
-                    <a href="" style="background-color: red; ">删除</a>
+                    <a href="" style="background-color: red; " onclick="return f();">删除</a>
                 </td>
               
             </tr>
-            <!-- {% endfor %} -->
+            {% endfor %}
         </table>
     </div>
     <div class="footer">
 
     </div>
+    <script>
+        function f(){
+            var tag=document.getElementById("delinf");
+            if(window.confirm("确定要删除吗?")){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
+    </script>
 </body>
 </html>
